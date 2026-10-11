@@ -1,3 +1,6 @@
+import http from "http";
+http.createServer((_, res) => res.end("Cheddar Bot Online")).listen(process.env.PORT || 10000);
+
 import {
   Client,
   GatewayIntentBits,
