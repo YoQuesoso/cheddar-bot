@@ -2587,7 +2587,21 @@ client.once(
       status: "online",
     });
 
-    await registerCommands();
+            // Registro Global forzado para evitar el error 404
+        try {
+            console.log("🔄 Registering commands globally...");
+            const { REST, Routes } = await import('discord.js');
+            const rest = new REST({ version: '10' }).setToken(TOKEN!);
+            
+            // Reemplaza 'commands' por el nombre de tu array de comandos si se llama distinto
+            await rest.put(
+                Routes.applicationCommands(CLIENT_ID!),
+                { body: commands } 
+            );
+            console.log("✅ Commands registered globally!");
+        } catch (error) {
+            console.error("❌ Error registering commands:", error);
+        }
   }
 );
 
