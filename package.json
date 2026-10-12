@@ -1,0 +1,19 @@
+
+{
+  "name": "cheddar-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "18.16.0"
+  },
+  "scripts": {
+    "start": "tsx bot.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.2.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.1"
+  }
+}
