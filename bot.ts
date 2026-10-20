@@ -129,7 +129,7 @@ const AVATAR_URL =
 
 function footer() {
   return {
-    text: "🧀 CHEDDAR • Entertainment and Community",
+    text: "🧀 CHEDDAR • by YoQuesoso",
     iconURL: AVATAR_URL,
   };
 }
